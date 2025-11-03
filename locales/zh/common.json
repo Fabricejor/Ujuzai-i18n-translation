@@ -1,0 +1,165 @@
+{
+  "navbar": {
+    "features": "功能",
+    "howItWorks": "工作原理",
+    "pricing": "价格",
+    "contact": "联系我们",
+    "login": "登录",
+    "getStarted": "开始使用"
+  },
+  "hero": {
+    "badge": "下一代AI自动化",
+    "title": "用AI",
+    "titleAccent": "自动化您的未来",
+    "subtitle": "通过我们的AI自动化平台转变您的业务流程。节省时间，降低成本，提高生产力。",
+    "ctaPrimary": "免费开始",
+    "ctaSecondary": "观看演示",
+    "stats": {
+      "uptime": "可用性",
+      "tasks": "自动化任务",
+      "companies": "企业"
+    }
+  },
+  "features": {
+    "title": "功能",
+    "subtitle": "您需要的一切",
+    "description": "一个全面的平台，用于自动化和优化您所有的业务流程",
+    "items": {
+      "ai": {
+        "title": "先进AI",
+        "description": "用于智能和自适应自动化的最先进机器学习算法。"
+      },
+      "deployment": {
+        "title": "即时部署",
+        "description": "在几分钟内设置和启动您的自动化，无需复杂代码。"
+      },
+      "security": {
+        "title": "最大安全性",
+        "description": "端到端加密和符合最严格标准的合规性。"
+      },
+      "api": {
+        "title": "灵活的API",
+        "description": "通过我们的现代REST API轻松与现有工具集成。"
+      },
+      "analytics": {
+        "title": "强大的分析",
+        "description": "实时仪表板跟踪性能并优化您的流程。"
+      },
+      "time": {
+        "title": "节省时间",
+        "description": "将重复性任务减少80%，专注于重要事项。"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "工作原理",
+    "subtitle": "简单。快速。有效。",
+    "description": "四步转变您的业务",
+    "steps": {
+      "connect": {
+        "title": "连接您的工具",
+        "description": "通过几次点击快速集成您的应用程序和数据源。"
+      },
+      "define": {
+        "title": "定义您的工作流",
+        "description": "使用我们直观的界面创建自定义自动化。"
+      },
+      "ai": {
+        "title": "让AI工作",
+        "description": "我们的人工智能24/7优化和执行您的流程。"
+      },
+      "analyze": {
+        "title": "分析结果",
+        "description": "实时跟踪性能并根据您的需求进行调整。"
+      }
+    }
+  },
+  "pricing": {
+    "title": "价格",
+    "subtitle": "适合每种需求的计划",
+    "description": "选择适合您企业规模和目标的计划。",
+    "popular": "最受欢迎",
+    "perMonth": " / 月",
+    "tiers": {
+      "essential": {
+        "name": "基础版",
+        "price": "49€",
+        "cta": "选择基础版",
+        "features": [
+          "每月10,000个任务",
+          "5个工作流",
+          "标准集成",
+          "邮件支持"
+        ]
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "99€",
+        "cta": "选择专业版",
+        "features": [
+          "每月50,000个任务",
+          "25个工作流",
+          "高级集成",
+          "24/7优先支持",
+          "API访问"
+        ]
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "定制",
+        "cta": "联系销售",
+        "features": [
+          "无限任务",
+          "无限工作流",
+          "自定义集成",
+          "专属支持",
+          "高级安全"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好转变",
+    "titleAccent": "您的业务了吗？",
+    "description": "加入数百家已经使用AI自动化流程的企业",
+    "ctaPrimary": "免费开始",
+    "ctaSecondary": "与专家交谈",
+    "disclaimer": "无需信用卡 • 14天免费试用"
+  },
+  "footer": {
+    "description": "转变您业务的下一代AI自动化。",
+    "copyright": "© 2025 Ujuzai. 保留所有权利。",
+    "language": "中文",
+    "currency": "EUR €",
+    "sections": {
+      "product": {
+        "title": "产品",
+        "features": "功能",
+        "pricing": "价格",
+        "integrations": "集成",
+        "api": "API"
+      },
+      "company": {
+        "title": "公司",
+        "about": "关于我们",
+        "blog": "博客",
+        "careers": "招聘",
+        "contact": "联系我们"
+      },
+      "resources": {
+        "title": "资源",
+        "docs": "文档",
+        "guides": "指南",
+        "support": "支持",
+        "status": "状态"
+      },
+      "legal": {
+        "title": "法律",
+        "privacy": "隐私",
+        "terms": "条款",
+        "cookies": "Cookie",
+        "licenses": "许可证"
+      }
+    }
+  }
+}

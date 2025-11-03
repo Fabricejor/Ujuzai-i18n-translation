@@ -1,0 +1,165 @@
+{
+  "navbar": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Login",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Next-generation AI automation",
+    "title": "Automate your",
+    "titleAccent": "future with AI",
+    "subtitle": "Transform your business processes with our AI automation platform. Save time, reduce costs, and increase productivity.",
+    "ctaPrimary": "Get started for free",
+    "ctaSecondary": "Watch demo",
+    "stats": {
+      "uptime": "Uptime",
+      "tasks": "Automated tasks",
+      "companies": "Companies"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Everything you need",
+    "description": "A comprehensive platform to automate and optimize all your business processes",
+    "items": {
+      "ai": {
+        "title": "Advanced AI",
+        "description": "State-of-the-art machine learning algorithms for intelligent and adaptive automation."
+      },
+      "deployment": {
+        "title": "Instant Deployment",
+        "description": "Set up and launch your automations in minutes, without complex code."
+      },
+      "security": {
+        "title": "Maximum Security",
+        "description": "End-to-end encryption and compliance with the strictest standards."
+      },
+      "api": {
+        "title": "Flexible API",
+        "description": "Easily integrate with your existing tools via our modern REST API."
+      },
+      "analytics": {
+        "title": "Powerful Analytics",
+        "description": "Real-time dashboards to track performance and optimize your processes."
+      },
+      "time": {
+        "title": "Time Savings",
+        "description": "Reduce repetitive tasks by 80% and focus on what matters."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Simple. Fast. Effective.",
+    "description": "Four steps to transform your business",
+    "steps": {
+      "connect": {
+        "title": "Connect your tools",
+        "description": "Quickly integrate your applications and data sources with just a few clicks."
+      },
+      "define": {
+        "title": "Define your workflows",
+        "description": "Create custom automations with our intuitive interface."
+      },
+      "ai": {
+        "title": "Let AI work",
+        "description": "Our artificial intelligence optimizes and executes your processes 24/7."
+      },
+      "analyze": {
+        "title": "Analyze results",
+        "description": "Track performance in real-time and adjust according to your needs."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "A plan for every need",
+    "description": "Choose the plan that matches the size and ambitions of your business.",
+    "popular": "Most popular",
+    "perMonth": " / month",
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "price": "€49",
+        "cta": "Choose Essential",
+        "features": [
+          "10,000 tasks/month",
+          "5 workflows",
+          "Standard integrations",
+          "Email support"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€99",
+        "cta": "Choose Pro",
+        "features": [
+          "50,000 tasks/month",
+          "25 workflows",
+          "Premium integrations",
+          "24/7 priority support",
+          "API access"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "cta": "Contact sales",
+        "features": [
+          "Unlimited tasks",
+          "Unlimited workflows",
+          "Custom integrations",
+          "Dedicated support",
+          "Advanced security"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to transform",
+    "titleAccent": "your business?",
+    "description": "Join hundreds of companies already automating their processes with AI",
+    "ctaPrimary": "Start for free",
+    "ctaSecondary": "Talk to an expert",
+    "disclaimer": "No credit card required • 14-day free trial"
+  },
+  "footer": {
+    "description": "Next-generation AI automation to transform your business.",
+    "copyright": "© 2025 Ujuzai. All rights reserved.",
+    "language": "English",
+    "currency": "EUR €",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "integrations": "Integrations",
+        "api": "API"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "blog": "Blog",
+        "careers": "Careers",
+        "contact": "Contact"
+      },
+      "resources": {
+        "title": "Resources",
+        "docs": "Documentation",
+        "guides": "Guides",
+        "support": "Support",
+        "status": "Status"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "cookies": "Cookies",
+        "licenses": "Licenses"
+      }
+    }
+  }
+}

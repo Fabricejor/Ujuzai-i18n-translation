@@ -1,0 +1,165 @@
+{
+  "navbar": {
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "badge": "Automatización IA de nueva generación",
+    "title": "Automatiza tu",
+    "titleAccent": "futuro con IA",
+    "subtitle": "Transforma tus procesos de negocio con nuestra plataforma de automatización IA. Ahorra tiempo, reduce costos y aumenta productividad.",
+    "ctaPrimary": "Comenzar gratis",
+    "ctaSecondary": "Ver demo",
+    "stats": {
+      "uptime": "Disponibilidad",
+      "tasks": "Tareas automatizadas",
+      "companies": "Empresas"
+    }
+  },
+  "features": {
+    "title": "Características",
+    "subtitle": "Todo lo que necesitas",
+    "description": "Una plataforma completa para automatizar y optimizar todos tus procesos de negocio",
+    "items": {
+      "ai": {
+        "title": "IA Avanzada",
+        "description": "Algoritmos de aprendizaje automático de vanguardia para automatización inteligente y adaptativa."
+      },
+      "deployment": {
+        "title": "Despliegue Instantáneo",
+        "description": "Configura y lanza tus automatizaciones en minutos, sin código complejo."
+      },
+      "security": {
+        "title": "Seguridad Máxima",
+        "description": "Cifrado de extremo a extremo y cumplimiento con los estándares más estrictos."
+      },
+      "api": {
+        "title": "API Flexible",
+        "description": "Integra fácilmente con tus herramientas existentes a través de nuestra API REST moderna."
+      },
+      "analytics": {
+        "title": "Analytics Potentes",
+        "description": "Tableros en tiempo real para seguir tu rendimiento y optimizar tus procesos."
+      },
+      "time": {
+        "title": "Ahorro de Tiempo",
+        "description": "Reduce las tareas repetitivas en un 80% y concéntrate en lo esencial."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Simple. Rápido. Efectivo.",
+    "description": "Cuatro pasos para transformar tu negocio",
+    "steps": {
+      "connect": {
+        "title": "Conecta tus herramientas",
+        "description": "Integra rápidamente tus aplicaciones y fuentes de datos con solo unos clics."
+      },
+      "define": {
+        "title": "Define tus flujos de trabajo",
+        "description": "Crea automatizaciones personalizadas con nuestra interfaz intuitiva."
+      },
+      "ai": {
+        "title": "Deja que la IA trabaje",
+        "description": "Nuestra inteligencia artificial optimiza y ejecuta tus procesos 24/7."
+      },
+      "analyze": {
+        "title": "Analiza los resultados",
+        "description": "Sigue el rendimiento en tiempo real y ajusta según tus necesidades."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Un plan para cada necesidad",
+    "description": "Elige el plan que corresponda al tamaño y ambiciones de tu empresa.",
+    "popular": "Más popular",
+    "perMonth": " / mes",
+    "tiers": {
+      "essential": {
+        "name": "Esencial",
+        "price": "49€",
+        "cta": "Elegir Esencial",
+        "features": [
+          "10,000 tareas/mes",
+          "5 flujos de trabajo",
+          "Integraciones estándar",
+          "Soporte por email"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "99€",
+        "cta": "Elegir Pro",
+        "features": [
+          "50,000 tareas/mes",
+          "25 flujos de trabajo",
+          "Integraciones premium",
+          "Soporte prioritario 24/7",
+          "Acceso API"
+        ]
+      },
+      "enterprise": {
+        "name": "Empresa",
+        "price": "Personalizado",
+        "cta": "Contactar ventas",
+        "features": [
+          "Tareas ilimitadas",
+          "Flujos de trabajo ilimitados",
+          "Integraciones personalizadas",
+          "Soporte dedicado",
+          "Seguridad avanzada"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Listo para transformar",
+    "titleAccent": "tu negocio?",
+    "description": "Únete a cientos de empresas que ya automatizan sus procesos con IA",
+    "ctaPrimary": "Comenzar gratis",
+    "ctaSecondary": "Hablar con un experto",
+    "disclaimer": "No se requiere tarjeta de crédito • Prueba gratuita de 14 días"
+  },
+  "footer": {
+    "description": "Automatización IA de nueva generación para transformar tu negocio.",
+    "copyright": "© 2025 Ujuzai. Todos los derechos reservados.",
+    "language": "Español",
+    "currency": "EUR €",
+    "sections": {
+      "product": {
+        "title": "Producto",
+        "features": "Características",
+        "pricing": "Precios",
+        "integrations": "Integraciones",
+        "api": "API"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Acerca de",
+        "blog": "Blog",
+        "careers": "Carreras",
+        "contact": "Contacto"
+      },
+      "resources": {
+        "title": "Recursos",
+        "docs": "Documentación",
+        "guides": "Guías",
+        "support": "Soporte",
+        "status": "Estado"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacidad",
+        "terms": "Términos",
+        "cookies": "Cookies",
+        "licenses": "Licencias"
+      }
+    }
+  }
+}

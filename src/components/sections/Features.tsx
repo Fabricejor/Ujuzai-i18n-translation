@@ -3,47 +3,73 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Bot, Zap, Shield, Code, TrendingUp, Clock } from "lucide-react";
 import { MovingBorder } from "../ui/moving-border";
+import { useTranslation } from "../../hooks/useTranslation";
 
-const features = [
+const getFeatures = (t: (key: string) => string) => [
   {
     icon: Bot,
-    title: "IA Avancée",
-    description: "Algorithmes d'apprentissage automatique de pointe pour une automatisation intelligente et adaptative.",
+    title: t("features.items.ai.title"),
+    description: t("features.items.ai.description"),
     color: "#8B5CF6", // Violet
   },
   {
     icon: Zap,
-    title: "Déploiement Instantané",
-    description: "Configurez et lancez vos automatisations en quelques minutes, sans code complexe.",
+    title: t("features.items.deployment.title"),
+    description: t("features.items.deployment.description"),
     color: "#3B82F6", // Blue
   },
   {
     icon: Shield,
-    title: "Sécurité Maximale",
-    description: "Chiffrement de bout en bout et conformité aux normes les plus strictes.",
+    title: t("features.items.security.title"),
+    description: t("features.items.security.description"),
     color: "#10B981", // Green
   },
   {
     icon: Code,
-    title: "API Flexible",
-    description: "Intégrez facilement avec vos outils existants via notre API REST moderne.",
+    title: t("features.items.api.title"),
+    description: t("features.items.api.description"),
     color: "#F97316", // Orange
   },
   {
     icon: TrendingUp,
-    title: "Analytics Puissants",
-    description: "Tableaux de bord en temps réel pour suivre vos performances et optimiser vos processus.",
+    title: t("features.items.analytics.title"),
+    description: t("features.items.analytics.description"),
     color: "#EC4899", // Pink
   },
   {
     icon: Clock,
-    title: "Gain de Temps",
-    description: "Réduisez les tâches répétitives de 80% et concentrez-vous sur l'essentiel.",
+    title: t("features.items.time.title"),
+    description: t("features.items.time.description"),
     color: "#6366F1", // Indigo
   },
 ];
 
 export const Features = () => {
+  const { t, loading } = useTranslation();
+
+  if (loading) {
+    return (
+      <section id="features" className="relative py-24 sm:py-32 bg-background overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-pulse">
+            <div className="h-4 bg-gray-700 rounded w-24 mx-auto mb-3"></div>
+            <div className="h-12 bg-gray-700 rounded w-96 mx-auto mb-4"></div>
+            <div className="h-6 bg-gray-700 rounded w-80 mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array(6).fill(0).map((_, index) => (
+              <div key={index} className="animate-pulse">
+                <div className="h-64 bg-gray-700 rounded-2xl"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const features = getFeatures(t);
+
   return (
     <section id="features" className="relative py-24 sm:py-32 bg-background overflow-hidden">
       {/* Background elements */}
@@ -59,13 +85,13 @@ export const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-3">
-            Fonctionnalités
+            {t("features.title")}
           </h2>
           <h3 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Tout ce dont vous avez besoin
+            {t("features.subtitle")}
           </h3>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Une plateforme complète pour automatiser et optimiser tous vos processus métier
+            {t("features.description")}
           </p>
         </motion.div>
 

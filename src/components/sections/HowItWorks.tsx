@@ -2,31 +2,57 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "../../hooks/useTranslation";
 
-const steps = [
+const getSteps = (t: (key: string) => string) => [
   {
     number: "01",
-    title: "Connectez vos outils",
-    description: "Intégrez rapidement vos applications et sources de données en quelques clics.",
+    title: t("howItWorks.steps.connect.title"),
+    description: t("howItWorks.steps.connect.description"),
   },
   {
     number: "02",
-    title: "Définissez vos workflows",
-    description: "Créez des automatisations personnalisées avec notre interface intuitive.",
+    title: t("howItWorks.steps.define.title"),
+    description: t("howItWorks.steps.define.description"),
   },
   {
     number: "03",
-    title: "Laissez l'IA travailler",
-    description: "Notre intelligence artificielle optimise et exécute vos processus 24/7.",
+    title: t("howItWorks.steps.ai.title"),
+    description: t("howItWorks.steps.ai.description"),
   },
   {
     number: "04",
-    title: "Analysez les résultats",
-    description: "Suivez les performances en temps réel et ajustez selon vos besoins.",
+    title: t("howItWorks.steps.analyze.title"),
+    description: t("howItWorks.steps.analyze.description"),
   },
 ];
 
 export const HowItWorks = () => {
+  const { t, loading } = useTranslation();
+
+  if (loading) {
+    return (
+      <section id="how-it-works" className="relative py-24 sm:py-32 bg-black overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20 animate-pulse">
+            <div className="h-4 bg-gray-700 rounded w-32 mx-auto mb-3"></div>
+            <div className="h-12 bg-gray-700 rounded w-80 mx-auto mb-4"></div>
+            <div className="h-6 bg-gray-700 rounded w-64 mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {Array(4).fill(0).map((_, index) => (
+              <div key={index} className="animate-pulse">
+                <div className="h-64 bg-gray-700 rounded-lg"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const steps = getSteps(t);
+
   return (
     <section id="how-it-works" className="relative py-24 sm:py-32 bg-black overflow-hidden">
       {/* Diagonal background split */}
@@ -44,13 +70,13 @@ export const HowItWorks = () => {
           className="text-center mb-20"
         >
           <h2 className="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-3">
-            Comment ça marche
+            {t("howItWorks.title")}
           </h2>
           <h3 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-white">
-            Simple. Rapide. Efficace.
+            {t("howItWorks.subtitle")}
           </h3>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Quatre étapes pour transformer votre entreprise
+            {t("howItWorks.description")}
           </p>
         </motion.div>
 

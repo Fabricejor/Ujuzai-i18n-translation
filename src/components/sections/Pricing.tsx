@@ -3,49 +3,84 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { ShimmerButton } from "../ui/shimmer-button";
+import { useTranslation } from "../../hooks/useTranslation";
 
-const pricingTiers = [
-  {
-    name: "Essentiel",
-    price: "49€",
-    features: [
-      "10,000 tâches/mois",
-      "5 workflows",
-      "Intégrations standards",
-      "Support par email",
-    ],
-    cta: "Choisir Essentiel",
-    popular: false,
-  },
-  {
-    name: "Pro",
-    price: "99€",
-    features: [
-      "50,000 tâches/mois",
-      "25 workflows",
-      "Intégrations premium",
-      "Support prioritaire 24/7",
-      "Accès API",
-    ],
-    cta: "Choisir Pro",
-    popular: true,
-  },
-  {
-    name: "Entreprise",
-    price: "Sur mesure",
-    features: [
-      "Tâches illimitées",
-      "Workflows illimités",
-      "Intégrations personnalisées",
-      "Support dédié",
-      "Sécurité avancée",
-    ],
-    cta: "Contacter les ventes",
-    popular: false,
-  },
-];
+const getPricingTiers = (t: any) => {
+  // Access features arrays directly from translations
+  const essentialFeatures = t("pricing.tiers.essential.features") || [
+    "10,000 tâches/mois",
+    "5 workflows", 
+    "Intégrations standards",
+    "Support par email"
+  ];
+  
+  const proFeatures = t("pricing.tiers.pro.features") || [
+    "50,000 tâches/mois",
+    "25 workflows",
+    "Intégrations premium", 
+    "Support prioritaire 24/7",
+    "Accès API"
+  ];
+  
+  const enterpriseFeatures = t("pricing.tiers.enterprise.features") || [
+    "Tâches illimitées",
+    "Workflows illimités",
+    "Intégrations personnalisées",
+    "Support dédié", 
+    "Sécurité avancée"
+  ];
+
+  return [
+    {
+      name: t("pricing.tiers.essential.name"),
+      price: t("pricing.tiers.essential.price"),
+      features: Array.isArray(essentialFeatures) ? essentialFeatures : [essentialFeatures],
+      cta: t("pricing.tiers.essential.cta"),
+      popular: false,
+    },
+    {
+      name: t("pricing.tiers.pro.name"),
+      price: t("pricing.tiers.pro.price"),
+      features: Array.isArray(proFeatures) ? proFeatures : [proFeatures],
+      cta: t("pricing.tiers.pro.cta"),
+      popular: true,
+    },
+    {
+      name: t("pricing.tiers.enterprise.name"),
+      price: t("pricing.tiers.enterprise.price"),
+      features: Array.isArray(enterpriseFeatures) ? enterpriseFeatures : [enterpriseFeatures],
+      cta: t("pricing.tiers.enterprise.cta"),
+      popular: false,
+    },
+  ];
+};
 
 export const Pricing = () => {
+  const { t, loading } = useTranslation();
+
+  if (loading) {
+    return (
+      <section id="pricing" className="relative py-24 sm:py-32 bg-background overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-pulse">
+            <div className="h-4 bg-gray-700 rounded w-16 mx-auto mb-3"></div>
+            <div className="h-12 bg-gray-700 rounded w-80 mx-auto mb-4"></div>
+            <div className="h-6 bg-gray-700 rounded w-96 mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            {Array(3).fill(0).map((_, index) => (
+              <div key={index} className="animate-pulse">
+                <div className="h-96 bg-gray-700 rounded-2xl"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const pricingTiers = getPricingTiers(t);
+
   return (
     <section id="pricing" className="relative py-24 sm:py-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-900/50 via-transparent to-transparent" />
@@ -59,13 +94,13 @@ export const Pricing = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-semibold tracking-wide uppercase text-gray-400 mb-3">
-            Tarifs
+            {t("pricing.title")}
           </h2>
           <h3 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Un plan pour chaque besoin
+            {t("pricing.subtitle")}
           </h3>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Choisissez le plan qui correspond à la taille et aux ambitions de votre entreprise.
+            {t("pricing.description")}
           </p>
         </motion.div>
 
@@ -84,7 +119,7 @@ export const Pricing = () => {
               {tier.popular && (
                 <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
                   <div className="px-4 py-1 text-sm font-semibold text-white bg-purple-500 rounded-full">
-                    Le plus populaire
+                    {t("pricing.popular")}
                   </div>
                 </div>
               )}
@@ -93,7 +128,7 @@ export const Pricing = () => {
               
               <div className="mb-6">
                 <span className="text-5xl font-bold">{tier.price}</span>
-                {tier.name !== "Entreprise" && <span className="text-gray-400"> / mois</span>}
+                {tier.cta !== t("pricing.tiers.enterprise.cta") && <span className="text-gray-400">{t("pricing.perMonth")}</span>}
               </div>
 
               <ul className="space-y-4 mb-8 flex-grow">

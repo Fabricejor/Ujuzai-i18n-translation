@@ -3,17 +3,20 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 import { cn } from "../cn";
+import { useTranslation } from "../../hooks/useTranslation";
+import { LanguageSelector } from "../LanguageSelector";
 
-const navLinks = [
-  { name: "Fonctionnalités", href: "#features" },
-  { name: "Comment ça marche", href: "#how-it-works" },
-  { name: "Tarifs", href: "#pricing" },
-  { name: "Contact", href: "#contact" },
+const getNavLinks = (t: (key: string) => string) => [
+  { name: t("navbar.features"), href: "#features" },
+  { name: t("navbar.howItWorks"), href: "#how-it-works" },
+  { name: t("navbar.pricing"), href: "#pricing" },
+  { name: t("navbar.contact"), href: "#contact" },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, loading } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,12 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (loading) {
+    return null; // or a loading skeleton
+  }
+
+  const navLinks = getNavLinks(t);
 
   return (
     <>
@@ -79,17 +88,18 @@ export const Navbar = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* Language Selector & CTA Buttons */}
             <div className="hidden md:flex items-center gap-4">
+              <LanguageSelector />
               <button className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                Se connecter
+                {t("navbar.login")}
               </button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="h-9 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black text-sm font-medium"
               >
-                Démarrer
+                {t("navbar.getStarted")}
               </motion.button>
             </div>
 
@@ -129,15 +139,18 @@ export const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-3 border-t border-black/10 dark:border-white/10">
+                <div className="flex justify-center mb-2">
+                  <LanguageSelector />
+                </div>
                 <button className="w-full py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                  Se connecter
+                  {t("navbar.login")}
                 </button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black text-base font-medium"
                 >
-                  Démarrer
+                  {t("navbar.getStarted")}
                 </motion.button>
               </div>
             </div>

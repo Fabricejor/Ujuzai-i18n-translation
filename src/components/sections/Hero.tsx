@@ -5,8 +5,25 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { ShimmerButton } from "../ui/shimmer-button";
 import { SparklesCore } from "../ui/sparkles";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export const Hero = () => {
+  const { t, loading } = useTranslation();
+
+  if (loading) {
+    return (
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+        <div className="text-center">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-700 rounded w-64 mx-auto mb-4"></div>
+            <div className="h-16 bg-gray-700 rounded w-96 mx-auto mb-4"></div>
+            <div className="h-6 bg-gray-700 rounded w-80 mx-auto"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Animated background */}
@@ -38,7 +55,7 @@ export const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-white/10 bg-black/30 backdrop-blur-sm"
           >
             <Sparkles className="w-4 h-4 text-yellow-300" />
-            <span className="text-sm font-medium text-white/80">Automatisation IA de nouvelle génération</span>
+            <span className="text-sm font-medium text-white/80">{t("hero.badge")}</span>
           </motion.div>
 
           {/* Main heading */}
@@ -48,11 +65,11 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight mb-6 text-white"
           >
-            Automatisez votre
+            {t("hero.title")}
             <br />
             <span className="relative inline-block mt-2">
               <span className="relative z-10 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
-                futur avec l'IA
+                {t("hero.titleAccent")}
               </span>
               <motion.div
                 initial={{ width: 0 }}
@@ -66,7 +83,7 @@ export const Hero = () => {
           {/* Subtitle with text generate effect */}
           <div className="max-w-3xl mx-auto mb-10">
             <TextGenerateEffect
-              words="Transformez vos processus métier avec notre plateforme d'automatisation IA. Gagnez du temps, réduisez les coûts et augmentez votre productivité."
+              words={t("hero.subtitle")}
               className="text-lg sm:text-xl text-gray-400 font-normal"
             />
           </div>
@@ -79,7 +96,7 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <ShimmerButton className="text-base font-semibold">
-              Commencer gratuitement
+              {t("hero.ctaPrimary")}
               <ArrowRight className="ml-2 w-4 h-4" />
             </ShimmerButton>
             
@@ -88,7 +105,7 @@ export const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="h-12 px-8 rounded-full border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold"
             >
-              Voir la démo
+              {t("hero.ctaSecondary")}
             </motion.button>
           </motion.div>
 
@@ -104,21 +121,21 @@ export const Hero = () => {
               className="text-center"
             >
               <div className="text-4xl sm:text-5xl font-bold mb-1 text-white">99.9%</div>
-              <div className="text-sm text-gray-400">Disponibilité</div>
+              <div className="text-sm text-gray-400">{t("hero.stats.uptime")}</div>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-4xl sm:text-5xl font-bold mb-1 text-white">10M+</div>
-              <div className="text-sm text-gray-400">Tâches automatisées</div>
+              <div className="text-sm text-gray-400">{t("hero.stats.tasks")}</div>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-4xl sm:text-5xl font-bold mb-1 text-white">500+</div>
-              <div className="text-sm text-gray-400">Entreprises</div>
+              <div className="text-sm text-gray-400">{t("hero.stats.companies")}</div>
             </motion.div>
           </motion.div>
         </div>
