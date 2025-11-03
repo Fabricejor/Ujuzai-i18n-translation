@@ -161,5 +161,18 @@
         "licenses": "ライセンス"
       }
     }
+  },
+  "jokes": {
+    "labels": {
+      "title": "ランダムジョーク",
+      "refresh": "更新",
+      "loading": "読み込み中",
+      "error": "ジョークを読み込めませんでした。もう一度お試しください。"
+    },
+    "types": {
+      "general": "一般",
+      "programming": "プログラミング",
+      "knock-knock": "ノックノック"
+    }
   }
 }

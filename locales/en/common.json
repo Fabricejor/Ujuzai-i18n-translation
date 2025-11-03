@@ -161,5 +161,18 @@
         "licenses": "Licenses"
       }
     }
+  },
+  "jokes": {
+    "labels": {
+      "title": "Random Joke",
+      "refresh": "Refresh",
+      "loading": "Loading",
+      "error": "Unable to load a joke. Please try again."
+    },
+    "types": {
+      "general": "General",
+      "programming": "Programming",
+      "knock-knock": "Knock-knock"
+    }
   }
 }

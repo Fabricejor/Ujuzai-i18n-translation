@@ -161,5 +161,18 @@
         "licenses": "Licences"
       }
     }
+  },
+  "jokes": {
+    "labels": {
+      "title": "Blague aléatoire",
+      "refresh": "Rafraîchir",
+      "loading": "Chargement",
+      "error": "Impossible de charger une blague. Réessayez."
+    },
+    "types": {
+      "general": "Général",
+      "programming": "Programmation",
+      "knock-knock": "Toc-toc"
+    }
   }
 }

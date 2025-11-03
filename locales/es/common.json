@@ -161,5 +161,18 @@
         "licenses": "Licencias"
       }
     }
+  },
+  "jokes": {
+    "labels": {
+      "title": "Broma aleatoria",
+      "refresh": "Actualizar",
+      "loading": "Cargando",
+      "error": "No se pudo cargar una broma. Inténtalo de nuevo."
+    },
+    "types": {
+      "general": "General",
+      "programming": "Programación",
+      "knock-knock": "Toc-toc"
+    }
   }
 }

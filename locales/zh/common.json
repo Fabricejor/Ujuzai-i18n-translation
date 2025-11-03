@@ -161,5 +161,18 @@
         "licenses": "许可证"
       }
     }
+  },
+  "jokes": {
+    "labels": {
+      "title": "随机笑话",
+      "refresh": "刷新",
+      "loading": "加载中",
+      "error": "无法加载笑话。请重试。"
+    },
+    "types": {
+      "general": "通用",
+      "programming": "编程",
+      "knock-knock": "敲门笑话"
+    }
   }
 }
